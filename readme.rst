@@ -67,3 +67,17 @@ Acknowledgement
 
 The CodeIgniter team would like to thank EllisLab, all the
 contributors to the CodeIgniter project and you, the CodeIgniter user.
+
+*************************
+Controller implementation
+*************************
+
+The implementation is done by overriding the standard CI_Controller and creating a new method
+That should be used for loading views, this method can be accessed when extending MY_Controller
+and using $this->View() method.
+
+The view method takes 4 parameters, viewName that is the name of the view you want to render (welcome_message).
+The data parameter is simply passed directly to the original $this->load->View() method without any changes
+this parameter is passed to all parts of the template.
+asString is yet another default parameter from the $this->load->view() and is not changed in anyway
+Last parameter indicates whether or not to render the menu portion of the bootstrap implementation. 
