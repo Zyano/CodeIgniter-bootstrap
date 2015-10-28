@@ -7,6 +7,16 @@ class MY_Controller extends CI_Controller {
      */
     public function __construct() {
         parent::__construct();
+
+        /**
+         * Automatically loads the migrations when the controller loads.
+         * This does add some overhead since it loads every single time the controller is loaded up.
+         */
+        $this->load->library('migration');
+
+        if($this->migration->current() === FALSE ) {
+            show_error($this->migration->error_string());
+        }
     }
 
     /**
