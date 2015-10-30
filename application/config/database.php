@@ -77,7 +77,7 @@ $db['default'] = array(
 	'dsn'	=> 'mysql:host=localhost;dbname=codeigniter',
 	'hostname' => '',
 	'username' => 'ci',
-	'password' => 'CodeIgniter#2219',
+	'password' => '',
 	'database' => 'codeigniter',
 	'dbdriver' => 'pdo',
 	'dbprefix' => '',
